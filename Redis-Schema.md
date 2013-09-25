@@ -1,11 +1,15 @@
 ### method ###
 
 The set of methods. Example, "GET entity/{id}/bundle".
+
 Type: SET
+
 Key: <method>
+
 Queries:
+
 * The list of all the methods called
-`SMEMBERS method`
+    `SMEMBERS method`
 
 ### count:method:\<interval\> ###
 
