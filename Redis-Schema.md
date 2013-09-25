@@ -2,13 +2,19 @@
 
 Description: Total number of calls to Synapse in 1 min, 5 min, 1 hour, 1 day, 1 week intervals.
 
-Key: timestamp at the proper precision determined by the interval
+Type:
 
-Value: count
+Key: \<timestamp\> at the proper precision determined by the interval
 
-### count:method ###
+Value: \<count\>
 
-### count:client ###
+### count:\<interval\>:\<method\> ###
+
+Description: Total number of calls to a method in 1 min, 5 min, 1 hour, 1 day, 1 week intervals.
+
+Type: 
+
+### count:\<interval\>:\<method\> ###
 
 ### latency ###
 
