@@ -1,10 +1,23 @@
+### method ###
+
+The set of methods. Example, "GET entity/{id}/bundle".
+
+Type: SET
+
+Key: <method>
+
+Queries:
+
+    * The list of all the methods called
+        `SMEMBERS method`
+
 ### count:method:\<interval\> ###
 
 Description: Total number of calls to a method in 1 min, 5 min, 1 hour, 1 day, 1 week intervals.
 
 Type: ZSET
 
-Key: \<timestamp\>:\<method\>. Timestamp -- at the proper precision determined by the interval. 
+Key: \<timestamp\>:\<method\>. Note timestamp is set at the proper precision determined by the interval. 
 
 Value: \<count\>
 
