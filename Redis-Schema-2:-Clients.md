@@ -1,41 +1,56 @@
-### method ###
+### client ###
 
-The set of all the method calls. Example, "GET entity/{id}/bundle" is one such method call.
+The set of all the clients. Example, "synapseRClient/0.29-1" is one such client.
 
-Type: SET
-
-Key: {method}
-
-Queries:
-
-* The list of all the methods called: `SMEMBERS method`
 ### count:{interval}:{client} ###
 
 Total number of calls made by a client at a fixed interval (1 hour, 1 day, or 1 week).
 
-### count:{interval}:{client}:{day} ###
+Key: {timestamp}. Note timestamp is calculated at the proper precision determined by the interval. 
 
-Total number of calls made by a client at a fixed interval (1 min, 5 min, or 10 min). This is the same as the above hash except that the counts are captured at smaller intervals.
+Value: {count}
 
+Queries:
 
-### user ###
+* The counts for a particular client at a particular interval `HGETALL count:{interval}:{client}`. To restore the series, must sort on the timestamp after retrieval.
 
-unique users using bitmap
+Notes:
 
-### user:method
+* `KEYS count:60:*` can fetch the list of the methods at the 1 min interval, which can be used in place of the client set.
+* Artificial method names can be added to represent aggregations of methods. For example, count:60:ALL can be used to capture counts for all the methods.
 
-### user:client ###
+### count:{interval}:{method}:{yyyymmdd} ###
 
-### new projects ###
+Total number of calls to a method at a fixed interval (1 min, 5 min, or 10 min). This is the same as the above hash except that the counts are captured at smaller intervals.
 
-### projects updated ###
+### latency-avg:{interval}:{method} ###
 
-### project  ###
+Average latency of a method call at a fixed interval (1 hour, 1 day, or 1 week).
 
-### most activate projects ###
+### latency-tp50:{interval}:{method} ###
 
-### most active users ###
+Median latency of a method call at a fixed interval (1 hour, 1 day, or 1 week).
 
-### files downloaded ###
+### latency-tp90:{interval}:{method} ###
 
-(More will be added.)
+Tp90 latency of a method call at a fixed interval (1 hour, 1 day, or 1 week).
+
+### latency-tp99:{interval}:{method} ###
+
+Tp99 latency of a method call at a fixed interval (1 hour, 1 day, or 1 week).
+
+### latency-avg:{interval}:{method}:{yyyymmdd} ###
+
+Average latency of a method call at a fixed interval (1 min, 5 min, 10 min).
+
+### latency-tp50:{interval}:{method}:{yyyymmdd} ###
+
+Median latency of a method call at a fixed interval (1 min, 5 min, 10 min).
+
+### latency-tp90:{interval}:{method}:{yyyymmdd} ###
+
+Tp90 latency of a method call at a fixed interval (1 min, 5 min, 10 min).
+
+### latency-tp99:{interval}:{method}:{yyyymmdd} ###
+
+Tp99 latency of a method call at a fixed interval (1 min, 5 min, 10 min).
