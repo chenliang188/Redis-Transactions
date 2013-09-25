@@ -1,6 +1,6 @@
-### count:\<interval\> ###
+### count:\<interval\>* ###
 
-Note: This statistics in this table can be inferred from count:\<interval\>:\<method\> or count:\<interval\>:\<client\>.
+Note: The statistics in this table can be inferred from count:\<interval\>:\<method\> or count:\<interval\>:\<client\>.
 
 Description: Total number of calls to Synapse in 1 min, 5 min, 1 hour, 1 day, 1 week intervals.
 
@@ -14,7 +14,7 @@ Value: \<count\>
 
 Description: Total number of calls to a method in 1 min, 5 min, 1 hour, 1 day, 1 week intervals.
 
-Type: 
+Type: ZSET
 
 ### count:\<interval\>:\<method\> ###
 
