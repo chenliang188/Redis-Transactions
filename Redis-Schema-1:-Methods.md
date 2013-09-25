@@ -29,7 +29,7 @@ Notes:
 * `KEYS count:60:*` can fetch the list of the methods at the 1 min interval, which can be used in place of the method set.
 * Artificial method names can be added to represent aggregations of methods. For example, count:60:ALL can be used to capture counts for all the methods.
 
-### count:{interval}:{method}:{day} ###
+### count:{interval}:{method}:{yyyymmdd} ###
 
 Total number of calls to a method at a fixed interval (1 min, 5 min, or 10 min). This is the same as the above hash except that the counts are captured at smaller intervals.
 
@@ -48,3 +48,19 @@ Tp90 latency of a method call at a fixed interval (1 hour, 1 day, or 1 week).
 ### latency-tp99:{interval}:{method} ###
 
 Tp99 latency of a method call at a fixed interval (1 hour, 1 day, or 1 week).
+
+### latency-avg:{interval}:{method}:{yyyymmdd} ###
+
+Average latency of a method call at a fixed interval (1 min, 5 min, 10 min).
+
+### latency-tp50:{interval}:{method}:{yyyymmdd} ###
+
+Median latency of a method call at a fixed interval (1 min, 5 min, 10 min).
+
+### latency-tp90:{interval}:{method}:{yyyymmdd} ###
+
+Tp90 latency of a method call at a fixed interval (1 min, 5 min, 10 min).
+
+### latency-tp99:{interval}:{method}:{yyyymmdd} ###
+
+Tp99 latency of a method call at a fixed interval (1 min, 5 min, 10 min).
