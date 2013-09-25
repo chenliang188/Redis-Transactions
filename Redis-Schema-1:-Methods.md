@@ -26,8 +26,8 @@ Queries:
 
 Notes:
 
-* `KEYS method:count:60:*` can fetch the list of the methods at the 1 min interval, which can be used in place of the method set.
-* Artificial method names can be added to represent aggregations of methods. For example, count:60:ALL can be used to capture counts for all the methods.
+* `KEYS method:count:1d:*` can fetch the list of the methods at the 1 day interval, which can be used in place of the method set.
+* Artificial method names can be added to represent aggregations of methods. For example, method:count:1d:ALL can be used to capture counts for all the method calls.
 
 ### method:count:{interval}:{method}:{yyyymmdd} ###
 
