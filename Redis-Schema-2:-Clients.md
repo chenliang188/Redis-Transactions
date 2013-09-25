@@ -1,4 +1,3 @@
-
 ### method ###
 
 The set of all the method calls. Example, "GET entity/{id}/bundle" is one such method call.
