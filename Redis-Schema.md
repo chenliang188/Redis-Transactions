@@ -1,4 +1,4 @@
-### count:<interval> ###
+### count:\<interval\> ###
 
 Description: Total number of calls to Synapse in 1 min, 5 min, 1 hour, 1 day, 1 week intervals.
 
