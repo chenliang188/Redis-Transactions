@@ -1,1 +1,2 @@
-Welcome to the dashboard wiki!
+[Architecture]
+[Redis Schema]
