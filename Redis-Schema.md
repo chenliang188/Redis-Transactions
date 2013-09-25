@@ -8,19 +8,21 @@ Key: <method>
 
 Queries:
 
-* The list of all the methods called
-    `SMEMBERS method`
+* The list of all the methods called: `SMEMBERS method`
 
-### count:method:\<interval\> ###
+### count:\<method\>:\<interval\> ###
 
-Description: Total number of calls to a method in 1 min, 5 min, 1 hour, 1 day, 1 week intervals.
+Total number of calls to a method in 1 min, 5 min, 1 hour, 1 day, 1 week intervals.
 
-Type: ZSET
+Type: HASH
 
-Key: \<timestamp\>:\<method\>. Note timestamp is set at the proper precision determined by the interval. 
+Key: \<timestamp\>. Note timestamp is set at the proper precision determined by the interval. 
 
 Value: \<count\>
 
+Queries:
+
+* 
 ### count:\<interval\>:\<method\> ###
 
 Description: 
