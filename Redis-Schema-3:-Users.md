@@ -10,7 +10,7 @@ Key/Value: {user-id}
 
 The number of unique users at a particular hour.
 
-Type: SET (used as a bit set. See <http://blog.getspool.com/2011/11/29/fast-easy-realtime-metrics-using-redis-bitmaps/>).  Alternatively, we can store a set of user IDs.
+Type: SET (One string used as a bit set. See <http://blog.getspool.com/2011/11/29/fast-easy-realtime-metrics-using-redis-bitmaps/>).  Alternatively, we can store a set of user IDs.
 
 ### user:new-account:{yyyymmddhh} ###
 
@@ -23,6 +23,16 @@ Key/Value: {user-id}
 Notes:
 
 * Sets of different hours can be unioned.
+
+### user:count:{interval} ###
+
+The count of user activity at a fixed interval (1 hour, 1 day, or 1 week). This allows us to list the most active users.
+
+Type: ZSET
+
+Key: {user-id}
+
+Value: {count}
 
 ### user:{user-id}:method:count:{interval} ###
 
