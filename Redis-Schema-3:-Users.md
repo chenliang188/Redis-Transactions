@@ -1,3 +1,11 @@
+### user ###
+
+The set of users.
+
+Type: SET
+
+Key/Value: {user-id}
+
 ### user:count:{yyyymmddhh} ###
 
 The number of unique users at a particular hour.
@@ -16,6 +24,22 @@ Notes:
 
 * Sets of different hours can be unioned.
 
-### user:method:count ###
+### user:{user-id}:method:count:{interval} ###
 
-### user:client:count ###
+Counts the use of method calls by a particular user at a fixed interval (1 day or 1 week).
+
+Type: HASH
+
+Key: {method}
+
+Value: {count}
+
+### user:{user-id}:client:count:{interval} ###
+
+Counts the use of clients by a particular user at a fixed interval (1 day or 1 week).
+
+Type: HASH
+
+Key: {client}
+
+Value: {count}
