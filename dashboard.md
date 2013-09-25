@@ -1,2 +1,0 @@
-## <Architecture>
-## <Redis Schema>
