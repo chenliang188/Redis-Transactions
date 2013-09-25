@@ -5,4 +5,4 @@ Dashboard will use a simple 2-tier architecture. It is composed of a web applica
 3. A Java HTTP servlet that receives queries and returns the cached metrics data. It interprets and executes the queries over the Redis cache and assembles the metrics suitable for presentation.
 4. A client-side JavaScript framework like D3 that renders the charts.
 
-The technologies to be used will include Gradle, Redis, Spring, Play (Java/Scala), D3.
+The technologies to be used will include Gradle, Redis, Spring, Play (Java/Scala), and D3.
