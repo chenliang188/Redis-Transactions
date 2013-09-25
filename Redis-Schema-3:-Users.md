@@ -24,7 +24,7 @@ Notes:
 
 * Sets of different hours can be unioned.
 
-### user:count:{interval} ###
+### user:count:{yyyymmddhh|yyyymmdd} ###
 
 The count of user activity at a fixed interval (1 hour, 1 day, or 1 week). This allows us to list the most active users.
 
@@ -33,6 +33,16 @@ Type: ZSET
 Key: {user-id}
 
 Value: {count}
+
+### user:method:count:{interval} ###
+
+Counts the number of unique users making method calls at a fixed interval (1 day or 1 week).
+
+Type: HASH
+
+Key: {method}
+
+Value: {bit-set}
 
 ### user:{user-id}:method:count:{interval} ###
 
