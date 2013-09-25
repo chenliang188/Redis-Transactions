@@ -33,38 +33,18 @@ Notes:
 
 Total number of calls to a method at a fixed interval (1 min, 5 min, or 10 min). This is the same as the above hash except that the counts are captured at smaller intervals.
 
-### count:{interval}:{client} ###
+### latency-avg:{interval}:{method} ###
 
-Total number of calls made by a client at a fixed interval (1 hour, 1 day, or 1 week).
+Average latency of a method call at a fixed interval (1 hour, 1 day, or 1 week).
 
-### count:{interval}:{client}:{day} ###
+### latency-tp50:{interval}:{method} ###
 
-Total number of calls made by a client at a fixed interval (1 min, 5 min, or 10 min). This is the same as the above hash except that the counts are captured at smaller intervals.
+Median latency of a method call at a fixed interval (1 hour, 1 day, or 1 week).
 
-### latency ###
+### latency-tp90:{interval}:{method} ###
 
-### latency:method ###
+Tp90 latency of a method call at a fixed interval (1 hour, 1 day, or 1 week).
 
-### latency:client ###
+### latency-tp99:{interval}:{method} ###
 
-### user ###
-
-unique users using bitmap
-
-### user:method
-
-### user:client ###
-
-### new projects ###
-
-### projects updated ###
-
-### project  ###
-
-### most activate projects ###
-
-### most active users ###
-
-### files downloaded ###
-
-(More will be added.)
+Tp99 latency of a method call at a fixed interval (1 hour, 1 day, or 1 week).
